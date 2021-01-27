@@ -102,6 +102,8 @@ class Travel extends Base
     "https://images.unsplash.com/photo-1607025434171-016f24de7f9a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGphcGFuZXNlJTIwZ2FyZGVufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
   ];
 
+  const COMMUNES = ["Ozan", "Cormoranche-sur-Saône", "Plagne", "Tossiat", "Pouillat", "Torcieu", "Replonges", "Corcelles", "Péron", "Relevant", "Chaveyriat", "Vaux-en-Bugey", "Maillat", "Faramans", "Béon", "Saint-Bernard", "Rossillon", "Pont-d'Ain", "Nantua", "Chavannes-sur-Reyssouze", "Neuville-les-Dames", "Flaxieu", "Hotonnes", "Saint-Sorlin-en-Bugey", "Songieu", "Virieu-le-Petit", "Saint-Denis-en-Bugey", "Charnoz-sur-Ain", "Chazey-sur-Ain", "Marchamp", "Culoz", "Mantenay-Montlin", "Marboz", "Foissiat", "Treffort-Cuisiat", "Izieu", "Saint-Étienne-du-Bois", "Hauteville-Lompnes", "Saint-Trivier-sur-Moignans", "Peyriat", "Évosges", "Poncin", "Crans", "Montréal-la-Cluse", "Cleyzieu", "Lompnieu", "Villereversure", "Saint-Martin-du-Mont", "Saint-Genis-Pouilly", "Bolozon", "Confrançon", "Lochieu", "Chanoz-Châtenay", "Villebois", "Ceignes", "Saint-Didier-sur-Chalaronne", "Revonnas", "Bourg-Saint-Christophe", "Condeissiat", "Pirajoux", "Chalamont", "Le Plantay", "Versailleux", "Montagnat", "Vieu", "Saint-André-de-Corcy", "Bressolles", "Péronnas", "Colomieu", "Monthieux", "Saint-Jean-sur-Reyssouze", "Garnerans", "Montrevel-en-Bresse", "Conand", "Challes-la-Montagne", "Mogneneins", "Thoissey", "Chaleins", "Neuville-sur-Ain", "Thil", "Jujurieux", "Oncieu", "Lurcy", "Balan", "Ambutrix", "Sainte-Croix", "Blyes", "Conzieu", "Niévroz", "Nurieux-Volognat", "Ambléon", "Saint-Maurice-de-Gourdans", "Chézery-Forens", "Sault-Brénaz", "Murs-et-Gélignieux", "Le Petit-Abergement", "Cormoz", "Saint-Martin-de-Bavel", "Saint-Trivier-de-Courtes", "Boyeux-Saint-Jérôme", "Château-Gaillard", "Prémeyzel", "Arandas", "Châtenay", "Innimond", "Boz", "Briord", "Reyrieux", "Matafelon-Granges", "Drom", "Châtillon-en-Michaille", "Polliat", "Vesancy", "Massieux", "Saint-Cyr-sur-Menthon", "Serrières-sur-Ain", "Nivollet-Montgriffon", "Izernore", "Saint-Nizier-le-Désert", "Guéreins", "Illiat", "La Tranclière", "Saint-Didier-de-Formans", "Mérignat", "Saint-Éloi", "La Chapelle-du-Châtelard", "Saint-Jean-de-Niost", "Savigneux", "Nattages", "Saint-Benoît", "Douvres", "Francheleins", "Dortan", "Saint-Germain-les-Paroisses", "Miribel", "Lancrans", "Échenevex", "Saint-Jean-sur-Veyle", "Billiat", "L'Abergement-de-Varey", "Villeneuve", "Villars-les-Dombes", "Thézillieu", "Saint-Étienne-sur-Reyssouze", "Souclin", "Saint-Just", "Civrieux", "Argis", "Talissieu", "Birieux", "Saint-Julien-sur-Veyle", "Thoiry", "Laiz", "Cressin-Rochefort", "Saint-Champ", "Saint-Georges-sur-Renon", "Lantenay", "Vernoux", "Cormaranche-en-Bugey", "Sainte-Euphémie", "Beaupont", "Brens", "Ramasse", "Divonne-les-Bains", "Léaz", "Villes", "Saint-Julien-sur-Reyssouze", "Groslée", "Vandeins", "Verjon", "Saint-André-sur-Vieux-Jonc", "Saint-André-d'Huiriat", "Grilly", "Cessy", "Ordonnaz", "Vescours", "Meillonnas", "Géovreisset", "Ceyzérieu", "Béard-Géovreissiat", "La Burbanche", "Perrex", "Villemotier", "Jasseron", "Corveissiat", "Journans", "Sermoyer", "Charix", "Arbignieu", "Leyssard", "Saint-Jean-de-Thurigneux", "Frans", "Tenay", "Bâgé-la-Ville", "Montmerle-sur-Saône", "Courmangoux", "Baneins", "Lagnieu", "Attignat", "Saint-André-de-Bâgé", "Pont-de-Vaux", "Ambérieu-en-Bugey", "Peyzieux-sur-Saône", "Crozet", "Seyssel", "Beynost", "Versonnex", "Saint-Laurent-sur-Saône", "Artemare", "Montracol", "Parves", "Pugieu", "Virieu-le-Grand"];
+
   const DIFFICULTY = [
     'Très facile',
     'Facile',
@@ -117,7 +119,7 @@ class Travel extends Base
   ];
 
 
-  public function hike() {
+  public function hiking() {
     $travelType = $this->generator->randomElement(self::MOUNTAIN_TRAVEL_TYPE);
     $mountain = $this->generator->randomElement(self::MOUNTAIN);
 
@@ -131,6 +133,14 @@ class Travel extends Base
     $length = mt_rand(2000, 100000);
 
     return round($length / 1000, 2) . $unit;
+  }
+
+  public function commune() {
+    return $this->generator->randomElement(self::COMMUNES);
+  }
+
+  public function postalCode() {
+    return mt_rand(0, 9) . mt_rand(0, 9) . mt_rand(0, 9) . mt_rand(0, 9) . mt_rand(0, 9);
   }
 
   public function duration($minutes_min = 45, $minutes_max = 43800) {

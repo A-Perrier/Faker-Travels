@@ -13,5 +13,7 @@ $faker->difficulty();
 $faker->way();
 $faker->coordinates();
 $faker->mountainImg();
+$faker->postalCode();
+$faker->commune();
 
 ```
