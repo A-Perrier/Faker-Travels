@@ -64,6 +64,44 @@ class Travel extends Base
     "dans l'Oural"
   ];
 
+  const MOUNTAIN_PICTURES = [
+    "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1491904768633-2b7e3e7fede5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1434394354979-a235cd36269d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1456428199391-a3b1cb5e93ab?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8bW91bnRhaW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1445363692815-ebcd599f7621?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fG1vdW50YWluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1501822810445-bba370e517ab?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fG1vdW50YWluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1540390769625-2fc3f8b1d50c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjB8fG1vdW50YWluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1456066775592-f14f4ea694a4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjN8fG1vdW50YWluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1535961652354-923cb08225a7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8cGFyYWRpc2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1434394566634-da0fa7e334b8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDl8fG1vdW50YWluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1600298882438-de4298571be4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTN8fG1vdW50YWluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1508766206392-8bd5cf550d1c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjB8fG1vdW50YWluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1600298881979-9b0c50d7abdf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODJ8fG1vdW50YWluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1514528924113-c419d0fa68ca?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODh8fG1vdW50YWluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1534419234121-27689a5fcd71?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTV8fG1vdW50YWluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1536340278414-a663b833c3dc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTZ8fG1vdW50YWluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1484107567883-cba035591dd9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTA2fHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1455156103819-5e305f42b365?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTA3fHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1503252549449-3e8751526ec7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTE4fHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1437382320143-352a4a540373?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTE5fHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1503146905569-77b3a2027f5d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTI4fHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1499062767764-01138963c0d7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTMwfHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1482771688899-7687b3b3e618?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTQ0fHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1471240946986-2c558419e9d6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTU2fHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1474645887926-c7bbdc50c668?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTU5fHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1445914897371-974b137e4402?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTcwfHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1462834026679-7c03bf571a67?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTc3fHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1514733405485-469c9c24f976?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTg4fHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1470043201067-764120126eb4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTgxfHxtb3VudGFpbnN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1582533635630-72f0452e16f5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8amFwYW5lc2UlMjBnYXJkZW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    "https://images.unsplash.com/photo-1607025434171-016f24de7f9a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGphcGFuZXNlJTIwZ2FyZGVufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+  ];
+
   const DIFFICULTY = [
     'Très facile',
     'Facile',
@@ -144,6 +182,10 @@ class Travel extends Base
 
   public function way() {
     return $this->generator->randomElement(self::WAYS);
+  }
+
+  public function mountainImg() {
+    return $this->generator->randomElement(self::MOUNTAIN_PICTURES);
   }
 
 

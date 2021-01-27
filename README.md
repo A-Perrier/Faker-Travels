@@ -12,5 +12,6 @@ $faker->duration();
 $faker->difficulty();
 $faker->way();
 $faker->coordinates();
+$faker->mountainImg();
 
 ```
